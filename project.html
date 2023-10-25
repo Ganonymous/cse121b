@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simplified FE Battle Simulator | CSE 121b | Final Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+  <nav>
+    <ul id="menu">
+      <li><a id="toggleMenu">&equiv;</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="w01-task.html">W1 Task</a></li>
+      <li><a href="w03-task.html">W3 Task</a></li>
+      <li><a href="w04-task.html">W4 Task</a></li>
+      <li><a href="w05-task.html">W5 Task</a></li>
+      <li><a href="project.html" class="active">Project</a></li>
+    </ul>
+  </nav>
+  <main id="gridly">
+    <h1>Final Project</h1>
+    <h2>Simplified Fire Emblem Battle Simulator</h2>
+    <h3>Available Characters</h3>
+
+    <select id="filterSpecial" title="Filter by character special">
+        <option value="" disabled selected>Filter characters by special</option>
+        <option value="Any">Any Special</option>
+        <option value="Sol">Sol</option>
+        <option value="Luna">Luna</option>
+        <option value="Astra">Astra</option>
+        <option value="Aether">Aether</option>
+        <option value="Rend Heaven">Rend Heaven</option>
+        <option value="Ignis">Ignis</option>
+        <option value="Glacies">Glacies</option>
+        <option value="Lethality">Lethality</option>
+    </select>
+    <div id="characters"></div>
+    
+    <h3>Current Contestants</h3>
+    <div id="contestants">
+        <div id="contestant1"></div>
+        <div id="contestant2"></div>
+    </div>
+    <input type="button" id="startBattle" value="Start Battle">
+    <div id="log"></div>
+    <p>I don't really have time to handle trying to pull the button and log</p>
+    <p>out from under the footer, so this is an easter egg I am inserting</p>
+    <p>to physically occupy that space and pull the footer down off them.</p>
+  </main>
+
+  <footer>
+    &copy;<span id="year"></span> | Project - Simplified FE Battle Simulator | CSE 121b
+  </footer>
+  <script src="scripts/main.js"></script>
+  <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
+  <script src="scripts/project.js" type="module"></script>
+</body>
+</html>
